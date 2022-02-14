@@ -1,0 +1,6 @@
+mutagen==1.45.1
+pycryptodomex==3.14.1
+pytube==11.0.2
+tk==0.1.0
+websockets==10.1
+yt-dlp==2022.2.4
