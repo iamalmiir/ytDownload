@@ -11,7 +11,9 @@ class App:
         self.url_variable = StringVar()
 
         # Styling YT
-        Label(text="YT ", bg=BG_COLOR, foreground="red", font=FONT_TITLE).place(relx=0.38, rely=0.1, anchor="center")
+        Label(text="YT ", bg=BG_COLOR, foreground="red", font=FONT_TITLE).place(
+            relx=0.38, rely=0.1, anchor="center"
+        )
         Label(
             text=" Download ⬇",
             background=BG_COLOR,
