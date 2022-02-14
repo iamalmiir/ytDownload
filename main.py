@@ -1,5 +1,5 @@
 from tkinter import Tk
-from myapp import App
+from source import App
 
 BG_COLOR = "#171717"
 WIDTH = 900
