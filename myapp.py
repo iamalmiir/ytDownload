@@ -22,19 +22,17 @@ class App:
         ).place(relx=0.5, rely=0.1, anchor="center")
 
         # URL Input Label
-        url_label = Label(
+        Label(
             text="Enter URL: ", foreground="#fff", bg=BG_COLOR, font=("Arial", 25)
-        )
-        url_label.place(relx=0.3, rely=0.3)
+        ).place(relx=0.3, rely=0.3)
 
         # URL Input
-        url_input = Entry(
+        Entry(
             textvariable=self.url_variable,
             font=("Arial", 20, "normal"),
             background="#fff",
             foreground="#000",
-        )
-        url_input.place(relx=0.45, rely=0.3)
+        ).place(relx=0.45, rely=0.3)
 
         def submit() -> None:
             with yt_dlp.YoutubeDL() as ydl:
@@ -43,7 +41,6 @@ class App:
             success_button = Button(text="Video has been downloaded successfully.")
             success_button.place(relx=0.6, rely=0.6)
 
-        submit_button = Button(
+        Button(
             text="Submit", background="#fff", foreground="#000", command=submit
-        )
-        submit_button.place(relx=0.5, rely=0.5)
+        ).place(relx=0.5, rely=0.5)
