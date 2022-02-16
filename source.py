@@ -35,13 +35,20 @@ class App:
         ).place(relx=0.45, rely=0.3)
 
         def submit() -> None:
-            with yt_dlp.YoutubeDL() as ydl:
-                ydl.download([self.url_variable.get()])
+            if self.url_variable.get() == '':
+                Label(
+                    text="Please enter URL",
+                    background="red",
+                    font=("Arial", 14),
+                ).place(relx=0.4, rely=0.4)
+            else:
+                with yt_dlp.YoutubeDL() as ydl:
+                    ydl.download([self.url_variable.get()])
 
-            Label(
-                text="Video has been downloaded successfully!",
-                background="green",
-                font=("Arial", 14),
-            ).place(relx=0.4, rely=0.4)
+                Label(
+                    text="Video has been downloaded successfully!",
+                    background="green",
+                    font=("Arial", 14),
+                ).place(relx=0.4, rely=0.4)
 
         Button(text="Submit", command=submit).place(relx=0.5, rely=0.5)
