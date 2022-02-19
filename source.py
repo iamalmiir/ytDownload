@@ -35,7 +35,7 @@ class App:
         ).place(relx=0.45, rely=0.3)
 
         def submit() -> None:
-            if self.url_variable.get() == '':
+            if self.url_variable.get() == "":
                 Label(
                     text="Please enter URL",
                     background="red",
